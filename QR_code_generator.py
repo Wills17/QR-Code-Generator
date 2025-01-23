@@ -8,20 +8,20 @@ import numpy as np
 data = "https://www.google.com/"
 
 # output file name
-qr_filename = "google_qr.png"
+qr_filename = "qr_image1.png"
 
 # generate qr code
-qr_img = qr.make(data)
+img = qr.make(data)
 
 # save img to a file
-qr_img.save(qr_filename)
+img.save(qr_filename)
 
 
 
 # recall data to be encoded
 data = "https://www.google.com/"
 
-# instantiate QRCode object
+# create new QRCode object
 qrcode = qr.QRCode(version=1, box_size=10, border=5)
 
 # add data to the QR code
@@ -31,8 +31,10 @@ qrcode.add_data(data)
 qrcode.make()
 
 # print the image shape
-print("The shape of the QR image:", np.array(qr.get_matrix()).shape)
+print("The shape of the QR Code image is:", np.array(qrcode.get_matrix()).shape)
+
 # transfer the array into an actual image
-img = qr.make_image(fill_color="white", back_color="black")
+img = qrcode.make_image(fill_color="black", back_color="white")
+
 # save it to a file
-img.save("site_inversed.png")
+img.save("qr_image2.png")
