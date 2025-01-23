@@ -3,7 +3,6 @@ import qrcode as qr
 import numpy as np
 
 
-
 # an example to be encoded
 data = "https://www.google.com/"
 
@@ -13,13 +12,11 @@ qr_filename = "qr_image1.png"
 # generate qr code
 img = qr.make(data)
 
-# display image produced
+# display code encoded
 img.show()
 
 # save img to a file
 img.save(qr_filename)
-
-
 
 
 
@@ -44,5 +41,20 @@ img = qrcode.make_image(fill_color="black", back_color="yellow")
 # save it to a file
 img.save("qr_image2.png")
 
-# display image
+# display new code encoded
 img.show()
+
+
+"""Read QR Code"""
+
+import cv2
+
+# read a QRCODE image
+img = cv2.imread("qr.image2.png")
+
+# initialize QRCode detector
+qr_detector = cv2.QRCodeDetector()
+
+# detect and decode the image
+data, bbox, straight_qrcode = qr_detector.detectAndDecode(img)
+
