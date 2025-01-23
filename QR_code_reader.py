@@ -1,5 +1,4 @@
-"""Read QR Code"""
-
+"""Read QR Code from file"""
 import cv2 as cv
 
 # read a QRCODE image
