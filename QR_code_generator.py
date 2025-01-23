@@ -4,13 +4,13 @@ import numpy as np
 
 
 # an example to be encoded
-data = "https://www.google.com/"
+data1 = "https://www.google.com/"
 
 # output file name
 qr_filename = "qr_image1.png"
 
 # generate qr code
-img = qr.make(data)
+img = qr.make(data1)
 
 # display code encoded
 img.show()
@@ -20,14 +20,19 @@ img.save(qr_filename)
 
 
 
+import time
+time.sleep(5)
+
+
+
 # new data to be encoded
-data = "https://www.github.com/"
+data2 = "https://www.github.com/"
 
 # create new QRCode object
 qrcode = qr.QRCode(version=1, box_size=10, border=4)
 
 # add data to the QR code
-qrcode.add_data(data)
+qrcode.add_data(data2)
 
 # compile the data into a QR code array
 qrcode.make()
@@ -36,10 +41,11 @@ qrcode.make()
 print("The shape of the QR Code image is:", np.array(qrcode.get_matrix()).shape)
 
 # transfer the array into an actual image
-img = qrcode.make_image(fill_color="black", back_color="yellow")
+img = qrcode.make_image(fill_color="black", back_color="white")
 
 # display new code encoded
 img.show()
 
-# save it to a file
+# save img to file
 img.save("qr_image2.png")
+

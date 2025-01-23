@@ -1,4 +1,3 @@
-
 """Read QR Code"""
 
 import cv2 as cv
@@ -37,11 +36,11 @@ if bbox is not None:
         point2 = tuple(map(int, bbox[(i + 1) % n_lines][0]))
         
         print(f"Drawing line from {point1} to {point2}\n")  # Debug output
-        cv.line(img, point1, point2, color=(255, 0, 0), thickness=2)
+        cv.line(img, point1, point2, color=(0, 0, 255), thickness=3)
         
 else:
     print("No QR code detected!\n")    
-        
+    
 # display the result
 cv.imshow("With bounding box", img)
 cv.waitKey(0)
