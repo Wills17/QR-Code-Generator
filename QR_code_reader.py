@@ -34,10 +34,10 @@ if bbox is not None:
         
         # draw all lines        
         point1 = tuple(map(int, bbox[i][0]))
-        point2 = tuple(map(int, bbox[(i + 1) % n_lines][0])) 
+        point2 = tuple(map(int, bbox[(i + 1) % n_lines][0]))
         
         print(f"Drawing line from {point1} to {point2}\n")  # Debug output
-        cv.line(img, point1, point2, color=(255, 0, 0), thickness=50)
+        cv.line(img, point1, point2, color=(255, 0, 0), thickness=2)
         
 else:
     print("No QR code detected!\n")    

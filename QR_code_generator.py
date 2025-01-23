@@ -13,7 +13,7 @@ qr_filename = "qr_image1.png"
 img = qr.make(data)
 
 # display code encoded
-#img.show()
+img.show()
 
 # save img to a file
 img.save(qr_filename)
@@ -24,7 +24,7 @@ img.save(qr_filename)
 data = "https://www.github.com/"
 
 # create new QRCode object
-qrcode = qr.QRCode(version=1, box_size=10, border=5)
+qrcode = qr.QRCode(version=1, box_size=10, border=4)
 
 # add data to the QR code
 qrcode.add_data(data)
@@ -36,11 +36,10 @@ qrcode.make()
 print("The shape of the QR Code image is:", np.array(qrcode.get_matrix()).shape)
 
 # transfer the array into an actual image
-img = qrcode.make_image(fill_color="black", back_color="white")
+img = qrcode.make_image(fill_color="black", back_color="yellow")
 
 # display new code encoded
-#img.show()
+img.show()
 
 # save it to a file
 img.save("qr_image2.png")
-
