@@ -13,11 +13,12 @@ qr_filename = "qr_image1.png"
 # generate qr code
 img = qr.make(data)
 
+# display image produced
+img.show()
+
 # save img to a file
 img.save(qr_filename)
 
-# display image produced
-img.show(qr_filename)
 
 
 
@@ -38,9 +39,10 @@ qrcode.make()
 print("The shape of the QR Code image is:", np.array(qrcode.get_matrix()).shape)
 
 # transfer the array into an actual image
-img = qrcode.make_image(fill_color="white", back_color="black")
+img = qrcode.make_image(fill_color="black", back_color="yellow")
 
 # save it to a file
 img.save("qr_image2.png")
 
+# display image
 img.show()
