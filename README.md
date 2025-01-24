@@ -45,4 +45,4 @@ python QRCode_read_from_camera.py
 
 ## Updates
 
-Subject to update in coming days.
+Subject to updates in coming days.
