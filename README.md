@@ -1,4 +1,4 @@
-# QR
+# QR Code Generator
  Code Project
 
 This project contains scripts for generating and reading QR codes using Python. It utilizes the `qrcode` library for generating QR codes and the `cv2` library (OpenCV) for reading QR codes from images in device storage and camera feeds.
@@ -42,3 +42,7 @@ To read a QR code using the device's camera, run the following command:
 ```sh
 python QRCode_read_from_camera.py
 ```
+
+## Updates
+
+Subject to update in coming days.
