@@ -46,3 +46,4 @@ else:
 cv.imshow("With bounding box", img)
 cv.waitKey(0)
 cv.destroyAllWindows()
+
