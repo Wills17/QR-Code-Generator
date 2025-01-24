@@ -1,3 +1,5 @@
+"""Example"""
+
 # import library to use
 import qrcode as qr
 import numpy as np
@@ -21,6 +23,7 @@ img1.save(qr_filename)
 
 
 """Example 2 with bounding box"""
+
 # new data to be encoded
 data2 = "https://www.github.com/"
 
