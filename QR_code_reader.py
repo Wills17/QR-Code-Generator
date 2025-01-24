@@ -1,5 +1,8 @@
 """Read QR Code from file"""
+
+# import library to use
 import cv2 as cv
+
 
 # read a QRCODE image
 img = cv.imread("qr_image2.png")
